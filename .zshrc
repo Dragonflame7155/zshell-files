@@ -1,3 +1,21 @@
+# --------------------------------------------------------------------------------
+#
+#  ____                               __ _                     _____ _ ____ ____
+# |  _ \ _ __ __ _  __ _  ___  _ __  / _| | __ _ _ __ ___   __|___  / | ___| ___|
+# | | | | '__/ _` |/ _` |/ _ \| '_ \| |_| |/ _` | '_ ` _ \ / _ \ / /| |___ \___ \
+# | |_| | | | (_| | (_| | (_) | | | |  _| | (_| | | | | | |  __// / | |___) |__) |
+# |____/|_|  \__,_|\__, |\___/|_| |_|_| |_|\__,_|_| |_| |_|\___/_/  |_|____/____/
+#                  |___/
+#
+# --------------------------------------------------------------------------------
+#
+# https://www.youtube.com/channel/UCqGyzqfltwGBneZOUEz7ayg
+#
+# --------------------------------------------------------------------------------
+#
+# https://github.com/Dragonflame7155
+#
+# --------------------------------------------------------------------------------
 # Use powerline
 USE_POWERLINE="false"
 # Source manjaro-zsh-configuration
@@ -10,18 +28,30 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
-#LS_COLORS='rs=0:di=36;00:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=36;35:*.tgz=01;34:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;38:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:';
-#export LS_COLORS
-#autoload -Uz promptinit
-#promptinit
-#prompt adam2
-#accent='red'
-RPS1='%F{black}🭮%f%K{black} %F{green}%(?.✓.[%?] )%f%k%F{91}%K{black}🭮%k%f%K{91}%T %H%D%Y%k'
+source ~/.git-prompt.sh
+setopt PROMPT_SUBST ; #PS1='[%n@%m %c$(__git_ps1 "(%s)")]\$'
 #PS1='[%F{red}%n%f]-[%F{red}%m%f]-[%F{red}%~%f%s ]-[%F{red}%t%f]-[%F{red}%H%D%Y%f]-[%F{cyan}%x%f]-[%F{red}%h%f]
 #→ '
-PS1='%K{91}%n@%m%k%F{91}%K{black}🭬%F{91} %~ %f%k%F{black}🭬%f'
-alias dragonflame="ascii-image-converter ~/Pictures/banner_no_text.png -W 50 --braille --threshold 30"
-alias backup='~/programs/backup.sh'
+PS1='%K{141}%n@%m %k%F{141}%K{241}%f %F{241}%k%K{black}%f%F{141} %~ %f%k%F{black}%f'
+RPS1='%F{black}%f%K{black} %F{green}%(?.✓.[%?] ) %F{241}%k%k%f%K{241} $(__git_ps1 " %s ")%F{141}%K{241}%k%f%K{141}%T %H%D%Y%k'
+alias dragonflame="ascii-image-converter /home/dragonflame/.image.png -W 50 --braille --threshold 30"
+alias backup='/home/dragonflame/programs/backup.sh'
+alias tetris='v run ~/v/examples/tetris/tetris.v '
+alias 2048='v run ~/v/examples/2048/2048.v'
+alias vcasino='v run ~/v/examples/vcasino/vcasino.v '
+alias fireworks='v run ~/v/examples/fireworks/fireworks.v'
+alias figlet='figlet -t'
+alias freecache='sudo sh -c "echo 1 >  /proc/sys/vm/drop_caches"'
+alias simplebackup='~/programs/simplebackup.sh'
+alias ls='/opt/coreutils/bin/ls --color=force'
 
+source ~/.local/share/icons-in-terminal/icons_bash.sh
+
+function dffile {
+  cat ~/.banner.txt >> $1
+}
+function dffile_fancy {
+  cat ~/.banner_fancy.txt >> $1
+}
 neofetch --ascii "$(dragonflame)" | lolcat
-#ls
+
