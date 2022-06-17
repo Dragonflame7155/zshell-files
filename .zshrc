@@ -32,8 +32,8 @@ source ~/.git-prompt.sh
 setopt PROMPT_SUBST ; #PS1='[%n@%m %c$(__git_ps1 "(%s)")]\$'
 #PS1='[%F{red}%n%f]-[%F{red}%m%f]-[%F{red}%~%f%s ]-[%F{red}%t%f]-[%F{red}%H%D%Y%f]-[%F{cyan}%x%f]-[%F{red}%h%f]
 #→ '
-PS1='%K{141}%n@%m %k%F{141}%K{241}%f %F{241}%k%K{black}%f%F{141} %~ %f%k%F{black}%f'
-RPS1='%F{black}%f%K{black} %F{green}%(?.✓.[%?] ) %F{241}%k%k%f%K{241} $(__git_ps1 " %s ")%F{141}%K{241}%k%f%K{141}%T %H%D%Y%k'
+PS1='%K{073}%n@%m %k%F{073}%K{241}%f %F{241}%k%K{black}%f%F{073} %~ %f%k%F{black}%f'
+RPS1='%F{black}%f%K{black} %F{green}%(?.✓.[%?] ) %F{241}%k%k%f%K{241} $(__git_ps1 " %s ")%F{073}%K{241}%k%f%K{073}%T %H%D%Y%k'
 alias dragonflame="ascii-image-converter /home/dragonflame/.image.png -W 50 --braille --threshold 30"
 alias backup='/home/dragonflame/programs/backup.sh'
 alias tetris='v run ~/v/examples/tetris/tetris.v '
@@ -54,4 +54,4 @@ function dffile_fancy {
   cat ~/.banner_fancy.txt >> $1
 }
 neofetch --ascii "$(dragonflame)" | lolcat
-
+#figlet Dragonflame7155 | lolcat
