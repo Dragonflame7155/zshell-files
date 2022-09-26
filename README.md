@@ -17,4 +17,6 @@ Two files included, .github-prompt.sh (which is not my own), that will tell you 
 
 You can use find and replace commands in any text editor to replace the old 255 color id in the prompts with a new one (works better with new prompt)
 
+### Aliases
 
+Uncomment as needed, most are personal preferences and programs that I have installed
