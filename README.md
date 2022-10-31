@@ -9,7 +9,7 @@ In order to switch, comment out the uncommented PS1="... (and RPS1) and comment 
 
 You can also add your own by commenting out the PS1 (and RPS1) statments and adding your own.
 
-### Github Integration
+### Git Integration
 
 Two files included, .github-prompt.sh (which is not my own), that will tell you the branch name on the right prompt (new prompt only); .github_stuff.sh provides the function git-push, which allows you to push to a repo without copying an access token (although you will need to add your own in the file), the formatting is "git-push username/repo_name"
 
